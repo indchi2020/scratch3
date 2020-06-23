@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: LLK/scratch-gui
+          repository: indchi2020/scratch-gui
           ref: develop
       - run: npm install
       - uses: actions/checkout@v2
@@ -20,11 +20,11 @@ jobs:
           path: ./scratch3
       - uses: actions/checkout@v2
         with:
-          repository: champierre/ml2scratch
+          repository: indchi2020/ml2scratch
           path: ./ml2scratch
       - uses: actions/checkout@v2
         with:
-          repository: champierre/posenet2scratch
+          repository: indchi2020/posenet2scratch
           path: ./posenet2scratch
       - uses: actions/checkout@v2
         with:
@@ -32,43 +32,29 @@ jobs:
           path: ./scratch-microbit-more
       - uses: actions/checkout@v2
         with:
-          repository: champierre/tm2scratch
+          repository: indchi2020/tm2scratch
           path: ./tm2scratch
       - uses: actions/checkout@v2
         with:
-          repository: champierre/scratch2maqueen
-          path: ./scratch2maqueen
-      - uses: actions/checkout@v2
-        with:
-          repository: champierre/handpose2scratch
+          repository: indchi2020/handpose2scratch
           path: ./handpose2scratch
       - uses: actions/checkout@v2
         with:
-          repository: champierre/facemesh2scratch
+          repository: indchi2020/facemesh2scratch
           path: ./facemesh2scratch
       - uses: actions/checkout@v2
+        
+     
         with:
-          repository: con3office/pasorich
-          path: ./pasorich
-      - uses: actions/checkout@v2
-        with:
-          repository: sugiura-lab/scratch3-qrcode
-          path: ./scratch3-qrcode
-      - uses: actions/checkout@v2
-        with:
-          repository: champierre/speech2scratch
+          repository: indchi2020/speech2scratch
           path: ./speech2scratch
       - uses: actions/checkout@v2
-        with:
-          repository: champierre/ic2scratch
-          path: ./ic2scratch
-      - run: sh ./ic2scratch/install.sh
+        
+      
       - run: sh ./speech2scratch/install.sh
-      - run: sh ./scratch3-qrcode/install.sh
       - run: sh ./scratch3/pasorich/install.sh
       - run: sh ./handpose2scratch/install.sh
       - run: sh ./facemesh2scratch/install.sh
-      - run: sh ./scratch2maqueen/install.sh
       - run: sh ./tm2scratch/install.sh
       - run: node ./install.js --gui=..
         working-directory: ./scratch-microbit-more
