@@ -52,7 +52,6 @@ jobs:
         
       
       - run: sh ./speech2scratch/install.sh
-      - run: sh ./scratch3/pasorich/install.sh
       - run: sh ./handpose2scratch/install.sh
       - run: sh ./facemesh2scratch/install.sh
       - run: sh ./tm2scratch/install.sh
